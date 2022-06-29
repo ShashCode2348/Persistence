@@ -26,12 +26,12 @@ else:
     print('Checking for smallest numbers of persistence. Press Ctrl + C to stop')
     max_pers = 2
     for num in range(26, 10000000):
-        z = False
+        z = True
         for counter in range(len(str(num))):
-            if str(num)[counter - 1] <= str(num)[counter]:
-                z = True
+            if str(num)[counter - 1] >= str(num)[counter]:
+                z = False
                 break
-        if z == False:
+        if z == True:
             continue
         if '2' in str(num) and '3' in str(num) or '2' in str(num) and '4' in str(num) or '1' in str(num):
             continue
