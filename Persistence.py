@@ -1,4 +1,4 @@
-def persistance(num):
+def persistence(num):
     persistence = 1
     product = 1
     for digit in str(num):
@@ -37,7 +37,7 @@ else:
             continue
         if str(num).count('2') > 1:
             continue
-        persistence = persistance(num)
+        persistence = persistence(num)
         if max_pers < persistence:
             print('The smallest number with persistence ' + str(persistence) + ' is ' + str(num))
             max_pers = persistence
